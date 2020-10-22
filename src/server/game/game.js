@@ -20,16 +20,16 @@ export default class Game {
 	constructor(){
 		//players = [], declare new snake for each player but thats for multiplayer, do it later
 		mySnake = new Snake(20,50)
-		mySnake.addToBody(19,50);
-		mySnake.addToBody(18,50);
-		mySnake.addToBody(17,50);
-		mySnake.addToBody(16,50);
-		mySnake.addToBody(15,50);
-		mySnake.addToBody(14,50);
-		mySnake.addToBody(13,50);
-		mySnake.addToBody(12,50);
-		mySnake.addToBody(11,50);
-		mySnake.addToBody(10,50);
+		// mySnake.addToBody(19,50);
+		// mySnake.addToBody(18,50);
+		// mySnake.addToBody(17,50);
+		// mySnake.addToBody(16,50);
+		// mySnake.addToBody(15,50);
+		// mySnake.addToBody(14,50);
+		// mySnake.addToBody(13,50);
+		// mySnake.addToBody(12,50);
+		// mySnake.addToBody(11,50);
+		// mySnake.addToBody(10,50);
 		// mySnake.addToBody(9,50);
 		// mySnake.addToBody(8,50);
 		// mySnake.addToBody(7,50);
@@ -79,11 +79,11 @@ function clientGameLoop(timeSinceOrigin) {
 	const secondsSinceLastRender = (Math.round(timeSinceOrigin - timeSincelastRender))/1000 // To get how many seconds its taking between each render.
 	const minimumTimeToRender = Math.round(( 1/snake_speed )*1000)/1000
 
-	console.log("")
-	console.log("Time since last render:",timeSinceOrigin - timeSincelastRender,"ms")
-	console.log("That time in seconds:",secondsSinceLastRender,"sec")
-	console.log("Minimum time allowed to render:",minimumTimeToRender,"sec")
-	console.log("FPS:",Math.round(1000/(timeSinceOrigin - timeSincelastRender)))
+	// console.log("")
+	// console.log("Time since last render:",timeSinceOrigin - timeSincelastRender,"ms")
+	// console.log("That time in seconds:",secondsSinceLastRender,"sec")
+	// console.log("Minimum time allowed to render:",minimumTimeToRender,"sec")
+	// console.log("FPS:",Math.round(1000/(timeSinceOrigin - timeSincelastRender)))
 
 	if(secondsSinceLastRender < minimumTimeToRender){ // Returns out of the function if the time between each render is too short
 		/**
@@ -95,9 +95,9 @@ function clientGameLoop(timeSinceOrigin) {
 		return 
 	}
 	
-	console.log("Time since last render when we are updating and drawing:",timeSinceOrigin - timeSincelastRender,"ms")
-	console.log("Game FPS:",Math.round(1000/(timeSinceOrigin - timeSincelastRender)))
-	console.log("")
+	// console.log("Time since last render when we are updating and drawing:",timeSinceOrigin - timeSincelastRender,"ms")
+	// console.log("Game FPS:",Math.round(1000/(timeSinceOrigin - timeSincelastRender)))
+	// console.log("")
 	
 	/**
 	 * `timeSincelastRender` gets the new `timeSinceOrigin` to calculate the time between each render.
