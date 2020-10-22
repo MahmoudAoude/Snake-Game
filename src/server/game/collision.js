@@ -23,9 +23,22 @@ export function collision_food(snake,food){
             if(snake.getHeadLocation()[1] == foodLocation.getFoodLocation()[1]){
                 console.log("EAT")
                 snake.ateFood(1)
-                food.foodRespawn(foodLocation.getFoodLocation()[0], foodLocation.getFoodLocation()[1])
+                food.foodRespawn(foodLocation.getFoodLocation()[0], foodLocation.getFoodLocation()[1],snake)
             }
         }
         //x++;
     });
+}
+
+
+
+export function collidedWithSelf(snake){
+    const x = 0
+    const y = 1
+    for (var bodyPartIndex = 1; bodyPartIndex < snake.getTailIndex(); bodyPartIndex++) {
+        if (snake.getHeadLocation()[x] == snake.body[bodyPartIndex][x] && snake.getHeadLocation()[y] == snake.body[bodyPartIndex][y]) {
+            return true
+        }  
+    }
+    return false
 }
